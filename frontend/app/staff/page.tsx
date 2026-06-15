@@ -28,7 +28,7 @@ export default function StaffPage() {
   })
 
   useEffect(() => {
-    document.title = 'Food Order - Staff'
+    document.title = 'BiteExpress - Staff'
   }, [])
 
   // Live: prepend newly created orders to the queue.

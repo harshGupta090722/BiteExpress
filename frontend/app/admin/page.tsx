@@ -24,7 +24,7 @@ function StatCard({ label, value, accent }: { label: string; value: string; acce
 
 export default function AdminPage() {
   useEffect(() => {
-    document.title = 'Food Order - Admin'
+    document.title = 'BiteExpress - Admin'
   }, [])
 
   const { data: statsData, loading: statsLoading, error } = useQuery<RevenueData>(GET_REVENUE_STATS)

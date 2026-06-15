@@ -8,8 +8,8 @@ import ApolloProvider from '@/lib/apollo-provider';
 const inter = Geist_Mono({ subsets: ['latin'] });
 
 export const metadata:  Metadata = {
-    title:  'Food Orders App',
-    description: 'Manage your food orders with Apollo GraphQL',
+    title:  'BiteExpress',
+    description: 'Manage your orders with BiteExpress and Apollo GraphQL',
 };
 
 export default function RootLayout({

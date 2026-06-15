@@ -1,4 +1,4 @@
-// Prisma schema for the single-restaurant food ordering app.
+// Prisma schema for the single-restaurant BiteExpress app.
 // Roles: CUSTOMER (guest by default), STAFF (manage orders), ADMIN (revenue + everything).
 
 generator client {

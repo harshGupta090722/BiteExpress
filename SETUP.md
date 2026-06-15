@@ -1,9 +1,9 @@
-# Food Delivery App — Setup Guide
+# BiteExpress — Setup Guide
 
-A single-restaurant food ordering app with three roles, built on a split architecture:
+A single-restaurant BiteExpress ordering app with three roles, built on a split architecture:
 
-- **`demo-food-server`** — Apollo GraphQL API (port 4000) + PostgreSQL (Prisma) + Redis subscriptions + Winston/Slack logging
-- **`demo-food-nextjs`** — Next.js UI (port 3000) + NextAuth (Auth.js) with Auth0
+- **`server`** — Apollo GraphQL API (port 4000) + PostgreSQL (Prisma) + Redis subscriptions + Winston/Slack logging
+- **`frontend`** — Next.js UI (port 3000) + NextAuth (Auth.js) with Auth0
 
 ## Roles
 
@@ -22,10 +22,10 @@ Roles live in Postgres. Configure `ADMIN_EMAILS` / `STAFF_EMAILS` so the right p
 - Redis running locally (`redis-server`) — required for subscriptions
 - An Auth0 application (Regular Web Application)
 
-## 1. Backend (`demo-food-server`)
+## 1. Backend (`server`)
 
 ```bash
-cd demo-food-server
+cd server
 npm install
 cp .env.example .env   # then fill in the values
 ```
@@ -48,10 +48,10 @@ npm run dev          # starts the API at http://localhost:4000/graphql
 
 > Use `npm run db:migrate` instead of `db:push` if you want versioned migration files.
 
-## 2. Frontend (`demo-food-nextjs`)
+## 2. Frontend (`frontend`)
 
 ```bash
-cd demo-food-nextjs
+cd frontend
 npm install
 cp .env.local.example .env.local   # then fill in the values
 ```
@@ -76,8 +76,8 @@ npm run dev          # starts the UI at http://localhost:3000
 ## 3. Run order
 
 1. `redis-server`
-2. `demo-food-server` → `npm run dev`
-3. `demo-food-nextjs` → `npm run dev`
+2. `server` → `npm run dev`
+3. `frontend` → `npm run dev`
 4. Open http://localhost:3000
 
 ## How auth flows (high level)

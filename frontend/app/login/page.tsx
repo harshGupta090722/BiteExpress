@@ -2,7 +2,7 @@ import { redirect } from 'next/navigation'
 import { auth, signIn } from '@/auth'
 
 export const metadata = {
-  title: 'Food Order - Staff Login',
+  title: 'BiteExpress - Staff Login',
 }
 
 export default async function LoginPage() {
